@@ -1,0 +1,6 @@
+{
+  "appTitle": "CV Generator",
+  "@appTitle": {
+    "description": "Generate your own CV in flutter"
+  }
+}
