@@ -9,7 +9,7 @@ class CvProfileListView extends StatelessWidget {
   const CvProfileListView({
     super.key,
     this.items = const [
-      CvProfile(1, 'Dominik Ocsofszki', ' ', ' ', ' ', ' ', ' ', ' ', ' '),
+      CvProfile(1, 'Dominik Ocsofszki', ' ', ' ', ' ', ' ', ' ', ' ', 'flutter_logo.png'),
       CvProfile(2, 'Anh Pham', ' ', ' ', ' ', ' ', ' ', ' ', ' '),
     ]
   });
@@ -40,10 +40,10 @@ class CvProfileListView extends StatelessWidget {
           final item = items[index];
 
           return ListTile(
-            title: Text('Cv Profile: ${item.id}'),
-            leading: const CircleAvatar(
+            title: Text('${item.fullName}'),
+            leading:  CircleAvatar(
               // Display the Flutter Logo image asset.
-              foregroundImage: AssetImage('assets/images/{item.imageNamePlusExtension}'),
+              foregroundImage: AssetImage('assets/images/{$item.imageNamePlusExtension}'),
             ),
             onTap: () {
               Navigator.restorablePushNamed(

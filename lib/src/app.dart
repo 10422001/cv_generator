@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 
+import 'cv_profile/cv_profile.dart';
 import 'cv_profile/cv_profile_details_view.dart';
 import 'cv_profile/cv_profile_list_view.dart';
 import 'sample_feature/sample_item_details_view.dart';
@@ -72,7 +73,7 @@ class MyApp extends StatelessWidget {
                   case SettingsView.routeName:
                     return SettingsView(controller: settingsController);
                   case CvProfileDetailsView.routeName:
-                    return const CvProfileDetailsView();
+                    return const CvProfileDetailsView(cvProfile: CvProfile(2,'name','','','','','','',''),);
                   case CvProfileListView.routeName:
                   default:
                     return const CvProfileListView();
